@@ -7,12 +7,9 @@ use std::{
     time::Duration,
 };
 
-use dotenvy::dotenv;
 mod picture;
 
 fn main() {
-    dotenv().expect(".env file not found");
-
     let data_dir = env::var("DATA_DIR").expect("DATA_DIR not set correctly");
     if let Err(_) = fs::metadata(&data_dir) {
         fs::create_dir(data_dir).expect("failed creating data directory");

@@ -6,6 +6,5 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.86"
 chrono = "0.4.38"
-dotenvy = "0.15.7"
 image = "0.25.1"
 v4l = "0.14.0"
