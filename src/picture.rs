@@ -13,7 +13,7 @@ use v4l::Device;
 use v4l::FourCC;
 
 pub fn take_picture() -> Result<String> {
-    let timestamp = Local::now().format("%Y-%m-%d_%H:%M");
+    let timestamp = Local::now().timestamp();
     let device = env::var("DEVICE_NUMBER")?.parse()?;
     let data_dir = env::var("DATA_DIR")?;
     let mut dev = Device::new(device)?;
